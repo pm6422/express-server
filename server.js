@@ -7,7 +7,7 @@ app.use(express.json());
 app.use(cors());
 
 app.get("/users", (req, res) => {
-  fs.readFile("MOCK_DATA.json", "utf8", (err, data) => {
+  fs.readFile("mock-data.json", "utf8", (err, data) => {
     if (err) {
       console.error(err);
       res.status(500).send("Internal Server Error");
